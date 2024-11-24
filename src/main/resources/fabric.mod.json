@@ -6,27 +6,28 @@
   "name": "${name}",
   "description": "Template for my fabric mods",
   "authors": [
-    "Fallen_Breath"
+    "Crystal0404"
   ],
   "contact": {
-    "homepage": "https://modrinth.com",
-    "sources": "https://github.com/Fallen-Breath/fabric-mod-template"
+    "homepage": "https://github.com/Crystal0404/ModChecker",
+    "sources": "https://github.com/Crystal0404/ModChecker"
   },
 
-  "icon": "assets/template_mod/icon.png",
+  "icon": "assets/modchecker/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.fallenbreath.template_mod.TemplateMod"
+      "crystal0404.modchecker.ModCheckerMod"
     ]
   },
   "mixins": [
-    "template_mod.mixins.json"
+    "modchecker.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.11.4",
-    "minecraft": "${minecraft_dependency}"
+    "minecraft": "${minecraft_dependency}",
+    "owo": "*"
   }
 }

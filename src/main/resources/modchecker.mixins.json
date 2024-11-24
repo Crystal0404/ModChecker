@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.fallenbreath.template_mod.mixins",
+  "package": "crystal0404.modchecker.mixins",
   "compatibilityLevel": "{{COMPATIBILITY_LEVEL}}",
   "mixins": [
-    "MinecraftServerMixin"
   ],
   "client": [
+    "ConfigSynchronizerClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1
