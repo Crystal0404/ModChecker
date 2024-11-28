@@ -25,10 +25,10 @@ import net.minecraft.text.Text;
 
 public class MessagePresets {
     public static final Text INSTALLATION = Text.literal(
-            "\nPlease install CrystalCarpetAddition!\n"
+            "\nPlease install ModChecker!\n"
     ).setStyle(Style.EMPTY.withColor(0x55FFFF)
     ).append(Text.literal(
-                    "https://modrinth.com/mod/crystalcarpetaddition"
+                    "https://github.com/Crystal0404/ModChecker"
             ).setStyle(Style.EMPTY.withColor(0x55FF55).withUnderline(true))
     );
 

@@ -21,7 +21,11 @@
 package crystal0404.modchecker;
 
 import crystal0404.modchecker.config.ModChecker;
+import crystal0404.modchecker.network.S2C;
+import crystal0404.modchecker.utils.MessagePresets;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,5 +40,11 @@ public class ModCheckerMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        S2C.init();
+        ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
+            if (!ServerPlayNetworking.canSend(handler.getPlayer(), S2C.modCheckerPayload.ID)) {
+                handler.disconnect(MessagePresets.INSTALLATION);
+            }
+        });
     }
 }
